@@ -44,7 +44,7 @@ public class UITextManager : MonoBehaviour, IObserver
 
         else if (setTime <= 0)
         {
-            Time.timeScale = 0.0f;
+           // Time.timeScale = 0.0f;
             // TimeOver 상황을 전달한다. 
             GameControl.Instance.SetGameResult(GameResultType.TimeOver);
         }

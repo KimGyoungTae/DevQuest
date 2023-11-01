@@ -36,11 +36,17 @@ public class ButtonControl : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("Assignment");
+        Debug.Log("게임 시작 버튼 클릭");
     }
 
     public void LobyScene()
     {
         SceneManager.LoadScene("StartScene");
+        
+        // 시작씬으로 다시 이동 시에 마우스 커서를 보이게 만들고, 마우스 위치 움직임 잠금을 해제한다.
+        // 해제하지 않는다면, 다시 씬 이동시에 마우스 커서가 움직이지 않아 버튼을 클릭할 수 없게 된다.
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void QuitGame()
